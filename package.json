@@ -1,0 +1,12 @@
+{
+  "name": "dev-helper-lib",
+  "version": "1.0.0",
+  "description": "A helpful library for server developers and DevOps workflows",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node index.js"
+  },
+  "keywords": ["devops", "server", "deployment", "ssh", "helper"],
+  "author": "DevTools Team",
+  "license": "MIT"
+}
